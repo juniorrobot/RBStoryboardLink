@@ -129,7 +129,9 @@
     self.modalInPopover = scene.modalInPopover;
     
     // Grabs miscellaneous properties.
-    self.title = scene.title;
+    if (nil != scene.title) {
+        self.title = scene.title;
+    }
     self.hidesBottomBarWhenPushed = scene.hidesBottomBarWhenPushed;
     self.editing = scene.editing;
     self.wantsFullScreenLayout = scene.wantsFullScreenLayout;
